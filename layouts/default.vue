@@ -5,16 +5,16 @@
         </div>
         <div class="basis-1/4 max-sm:basis-auto">
         </div>
-        <nav class="{'basis-1/2 flex flex-row items-center justify-end px-8 gap-4':!burger || burger,
+        <nav class="{'basis-1/2 flex flex-row items-center justify-end px-8 gap-4': !burger || burger,
         'masx-sm:basis-auto max-sm:absolute max-sm:top-full max-sm:w-full max-sm:justify-center max-sm:flex-col max-sm:gap-0 max-sm:bg-white max-sm:px-0':burger,
         'max-sm:hidden': !burger}">
             <NuxtLink to = "/" class="my auto p-2 hover:bg-gray-500 rounded-lg max-sm:border-b-2 max-sm:w-full max-sm:border-black max-sm:text-center">Home</NuxtLink>
-            <div class="ml-auto p-2 hover:bg-gray-500 hover:text-white max-sm:w-full max-sm:text-center max-sm:px-0 max-sm:p-0" @click="switch_submenu">LABS
-                <div class="flex flex-col top-16 absolute bg-white text-black w-56 text-center max-sm:relative max-sm:w-full max-sm:bg-red-100" v-show="submenu">
+            <div class="ml-auto p-2 hover:bg-gray-500 hover:text-white max-sm:w-full max-sm:text-center max-sm:px-0 max-sm:pb-0" @click = "switch_submenu">LABS
+                <div class="flex flex-col top-2 absolute bg-white text-black w- text-center max-sm:relative max-sm:w-full max-sm:bg-red-100 max-sm:px-0" v-show="submenu">
                     <NuxtLink to =/lab4 class="my-auto p-2 border-b-2 border-black hover:bg-gray-500 hover:text-white max-sm:w-full max-sm:text-center">LAB4</NuxtLink>
                     <NuxtLink to =/lab5 class="my-auto p-2 border-b-2 border-black hover:bg-gray-500 hover:text-white max-sm:w-full max-sm:text-center">LAB5</NuxtLink>
                     <NuxtLink to =/lab6 class="my-auto p-2 border-b-2 border-black hover:bg-gray-500 hover:text-white max-sm:w-full max-sm:text-center">LAB6</NuxtLink>
-                </div>
+                </div>ы
             </div>
             <NuxtLink to = "/login" class="{'my auto p-2 hover:bg-gray-500 rounded-lg max-sm:border-b-2 max-sm:w-full max-sm:border-black max-sm:text-center': submenu,
             'my-auto p-2 hover-bg-gray-500 hover:text-white max-sm:w-full max-sm:border-b-2 max-sm:text-center':!submenu}">Login</NuxtLink>
@@ -69,7 +69,7 @@ useHead({
 
 const burger = ref<boolean>(false)
 const submenu = ref<boolean>(false)
-const switch_burger = ()=>(burger.value = !burger.value)
-const switch_submenu = ()=>(submenu.value = !submenu.value)
+const switch_burger =()=>(burger.value = !burger.value)
+const switch_submenu =()=>(submenu.value = !submenu.value)
 
 </script>
