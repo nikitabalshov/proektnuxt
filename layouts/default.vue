@@ -1,7 +1,7 @@
-<template>
+<template >
     <header class="flex flex-row w-full shadow-lg shadow-gray-400 max-sm:relative max-sm:justify-between">
         <div class="basis-1/4 items-center justify-start px-4 max-sm:basis-auto">
-            <img src="assets/images/skull.svg" class="w-14 h-16" alt="Logo">
+            <img src="assets/images/icon.png" class=" h-20" alt="Logo">
         </div>
         
         <nav :class="burger 
@@ -30,7 +30,7 @@
         </div>
     </header>
 
-    <main class="p-5 flex bg-gray-300 h-screen">
+    <main class=" flex bg-gray-300">
         <slot />
     </main>
 
