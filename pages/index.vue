@@ -81,7 +81,7 @@
     temp1.value = response1.data.temperature_2m;
     hum1.value = response1.data.relative_humidity_2m;
     wind1.value = response1.data.wind_speed_10m;
-я
+
     const response2 = await axios.get('https://api.open-meteo.com/v1/forecast?latitude=42.2272&longitude=-111.401&hourly=temperature_2m,wind_speed_10m,relative_humidity_2m');
     temp2.value = response2.data.temperature_2m;
     hum2.value = response2.data.relative_humidity_2m;
