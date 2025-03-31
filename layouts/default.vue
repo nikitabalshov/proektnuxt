@@ -1,16 +1,16 @@
 <template >
-    <header class="flex flex-row w-full shadow-lg shadow-gray-400 max-sm:relative max-sm:justify-between">
+    <header class="flex flex-row w-full shadow-lg shadow-gray-400 max-sm:relative max-sm:justify-between z-40">
         <div class="basis-1/4 items-center justify-start px-4 max-sm:basis-auto">
             <img src="assets/images/icon.png" class=" h-20" alt="Logo">
         </div>
         
         <nav :class="burger 
-            ? 'basis-1/2 flex flex-col absolute top-full left-0 w-full bg-white px-0 max-sm:flex'
+            ? 'basis-1/2 flex flex-col absolute top-full left-0 w-full bg-white px-0 max-sm:flex z-20'
             : 'basis-1/2 flex flex-row items-center justify-end px-8 gap-4 max-sm:hidden'">
             <NuxtLink to="/" class="p-2 hover:bg-gray-500 rounded-lg max-sm:border-b-2 max-sm:w-full max-sm:border-black max-sm:text-center">Home</NuxtLink>
             
             <div class="relative">
-                <div class="p-2 cursor-pointer hover:bg-gray-500 hover:text-white max-sm:w-full max-sm:text-center" @click="switch_submenu">LABS</div>
+                <div class=" z-50 p-2 cursor-pointer hover:bg-gray-500 hover:text-white max-sm:w-full max-sm:text-center" @click="switch_submenu">LABS</div>
                 <div v-show="submenu" class="absolute left-0 top-full w-full bg-white shadow-md max-sm:relative">
                     <NuxtLink to="/lab4" class="block p-2 border-b hover:bg-gray-500 hover:text-white">LAB4</NuxtLink>
                     <NuxtLink to="/lab5" class="block p-2 border-b hover:bg-gray-500 hover:text-white">LAB5</NuxtLink>
