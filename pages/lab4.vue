@@ -7,12 +7,7 @@
       <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-black/100 to-transparent"></div>
       <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/100 to-transparent"></div>
     </div>
-
-  <!-- <div
-      v-if="selectedCharacter"
-      class="absolute inset-0 bg-black opacity-50 transition-opacity duration-500 z-0">
-  </div> -->
-  <h1
+    <h1
       v-if="selectedCharacter"
       class="absolute top-4 text-3xl font-bold text-white text-center w-full z-10"
     >
@@ -58,6 +53,7 @@ const defaultCharacter: Character = {
   Description: 'The Emperor of Mankind is the immortal Perpetual who serves as the ruling monarch',
 };
 
+
 const characters = reactive<Character[]>([
   {name:'Ferrus', icon: '/Ferrus/Ferrus.webp',image: '/Ferrus/Ferrus_Back.webp', Description: 'Ferrus Manus, known as the Gorgon, was the loyal Primarch of the Iron Hands Legion. He was one of the Emperor of Mankind\'s 20 genetically-engineered sons, and his saga is one of the most tragic in the history'},
   {name:'Fulgrim', icon: '/Fulgrim/fulgrim.webp',image:'/Fulgrim/Fulgrim_Back.webp',Description: 'Fulgrim, known in his early life as the Phoenician, is the Primarch of the Emperor\'s Children, a loyalist Space Marine Legion of superhuman warriors raised by the Emperor of Mankind to unite the galaxy in the late 30th Millennium'},
@@ -79,8 +75,10 @@ const characters = reactive<Character[]>([
   {name:'Alpharius', icon: '/Alpharius/Alpharius.webp',image:'/Alpharius/Alpharius_Back.webp',Description: 'Alpharius, also known as the Last Primarch and the Lord of Serpents, is the Primarch of the Alpha Legion Space Marine Legion. He was one of the Emperor of Mankind\'s 20 genetically-engineered sons, and his saga is one of the most tragic in the history of the Imperium'}
 ]);
 
+
 const selectedCharacter = ref<Character | null>(defaultCharacter);
 ;
+
 
 function selectCharacter(character: Character) {
   selectedCharacter.value = character;
