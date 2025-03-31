@@ -1,8 +1,8 @@
-<template class="overflow-hidden">
+<template class="overflow-hidden z-0">
   <main 
   :class="selectedCharacter ? 'flex flex-col items-center justify-center bg-cover bg-center  p-0' : 'flex flex-col items-center justify-center w-screen h-screen bg-gray-100'"
   :style="selectedCharacter ? { backgroundImage: `url(${selectedCharacter.image})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' } : {}"
-  class="w-screen h-[790px] relative overflow-hidden">
+  class="w-screen h-[790px] relative overflow-hidden z-0">
     <div class="absolute inset-0 pointer-events-none">
       <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-black/100 to-transparent"></div>
       <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/100 to-transparent"></div>
